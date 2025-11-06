@@ -126,3 +126,40 @@ button:active {
 .info li {
   margin-bottom: 5px;
 }
+
+/* --- Clases de resalte para validación --- */
+.highlight-success {
+    background-color: #d4edda; /* Verde claro */
+    color: #155724; /* Verde oscuro */
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.highlight-error {
+    background-color: #f8d7da; /* Rojo claro */
+    color: #721c24; /* Rojo oscuro */
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+/* Estilos de la caja de resultados (mejorar el layout) */
+.form-container, .results-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+.validation-result {
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+    margin-top: 15px;
+}
+.regex-hint {
+    color: #6c757d;
+    font-size: 0.9em;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
