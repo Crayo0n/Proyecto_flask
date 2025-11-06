@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validador con Expresiones Regulares</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>🔍 Validador con Expresiones Regulares</h1>
+
+      <form id="validationForm">
+        <div class="form-group">
+          <label for="email">📧 Correo Electrónico</label>
+          <input
+            type="text"
+            id="email"
+            name="email"
+            placeholder="ejemplo@correo.com"
+          />
+          <div class="message" id="emailMsg"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="telefono">📱 Teléfono (Formato Internacional)</label>
+          <input
+            type="text"
+            id="telefono"
+            name="telefono"
+            placeholder="+521234567890"
+          />
+          <div class="message" id="telefonoMsg"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="url">🌐 URL</label>
+          <input
+            type="text"
+            id="url"
+            name="url"
+            placeholder="https://ejemplo.com"
+          />
+          <div class="message" id="urlMsg"></div>
+        </div>
+
+        <button type="submit">Validar Todo</button>
+      </form>
+
+      <div class="info">
+        <h3>📋 Formatos válidos:</h3>
+        <ul>
+          <li><strong>Email:</strong> usuario@dominio.com</li>
+          <li>
+            <strong>Teléfono:</strong> +521234567890 (código de país opcional)
+          </li>
+          <li>
+            <strong>URL:</strong> https://ejemplo.com o http://www.ejemplo.com
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  </body>
+</html>
