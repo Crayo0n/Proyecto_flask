@@ -5,8 +5,18 @@ bp = Blueprint('main', __name__)
 
 @bp.route('/')
 def index():
-    """Página principal"""
-    return render_template('index.html')
+    results = None
+    
+    if request.method == 'POST':
+        # Obtener los datos del formulario de validación
+        nombre = request.form.get('nombre', '')
+        ipv4 = request.form.get('ipv4', '')
+        email = request.form.get('email', '')
+        
+        # Ejecutar la validación de las expresiones regulares
+        results = validate_all(nombre.strip(), ipv4.strip(), email.strip())
+        
+    return render_template('index.html', results=results)
 
 @bp.route('/validate', methods=['POST'])
 def validate():
